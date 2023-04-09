@@ -1,1 +1,12 @@
 # Do It Redux
+
+## createSlice란?
+
+리듀서 함수의 객체, 슬라이스 이름, 초기 상태 값을 받아들이고 해당 액션 생성자와 액션 유형으로 슬라이스 리듀서를 자동으로 생성합니다
+
+- action 타입 정의, action 생성 합수: Actions.js
+- initial state 정의, reducer 함수: Reducers.js
+
+이 전의 코드들은 위와 같은 구조를 가지고 있었습니다. 
+createSlice를 이용하면 action과 reducer를 하나의 파일에서 관리할 수 있습니다.
+createAction, createReducer 함수가 내부적으로 사용되며, createSlice에 선언된 슬라이스 이름(아래 예시 코드의 name 부분)을 따라서 reducer와 action 생성자, action type을 자동으로 생성합니다
