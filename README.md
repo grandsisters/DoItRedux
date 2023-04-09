@@ -1,5 +1,10 @@
 # Do It Redux
 
+## 보시기전에
+
+프로젝트 내의 주요 모듈
+index.js / store.js / counterSlice.js / Counter.js 를 봐주시면 시간을 절약하실 수 있습니다.
+
 ## configureStore란?
 
 configureStore는 리덕스의 createStore를 추상화 한 것입니다. <br/>
