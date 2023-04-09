@@ -9,6 +9,8 @@ import {
 import styles from './Counter.module.css';
 
 export function Counter() {
+  // useSelector는 스토어의 상태값을 반환해주는 역할을 합니다.
+  // useSelector를 사용한 함수에서 리덕스 스토어의 상태값이 바뀐 경우 바뀐 스토어의 상태값을 다시 가져와 컴포넌트를 렌더링 시켜줍니다.
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');

@@ -8,7 +8,7 @@ import './index.css';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-
+// 앱 내의 컴포넌트 어디에서든 store에 접근할 수 있도록 Provider로 감싸줍니다.
 root.render(
   <React.StrictMode>
     <Provider store={store}>
