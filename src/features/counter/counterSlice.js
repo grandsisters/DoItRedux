@@ -1,12 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  value: 0,
-};
 // createSlice는 리듀서 함수의 객체, 슬라이스 이름, 초기 상태 값을 받아들이고 해당 액션 생성자와 액션 유형으로 슬라이스 리듀서를 자동으로 생성합니다
 export const counterSlice = createSlice({
-  name: 'counter', // 슬라이스 이름
-  initialState, // 초기 상태 값
+  name: 'counter', // 슬라이스 이름, action 앞에 첨가되어 다른 slice의 action들과 이름 중복을 피하는 역할을 한다.
+  initialState: { // 초기 상태 값
+    value: 5,
+  },
   reducers: { // 리듀서 함수의 객체
     increment: (state) => {
       state.value += 1;
@@ -15,7 +14,7 @@ export const counterSlice = createSlice({
       state.value -= 1;
     },
     incrementByAmount: (state, action) => {
-      // action.payload 는 해당 액션과 같이 전달하는 값을 의미합니다.
+      // action.payload는 해당 액션과 같이 전달하는 값을 의미합니다.
       // 예를 들어, setName(value) 와 같이 액션을 호출하는 코드를 작성했다면 action.payload 값에는 value 가 담기게 됩니다.
       // incrementByAmount(incrementValue) 라는 코드를 작성했으니 action.payload 값은 incrementValue가 됩니다.
       state.value += action.payload;
